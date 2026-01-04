@@ -6,10 +6,12 @@ Thank you for your interest in contributing to JSON Repair! This document provid
 
 Our project follows a structured branching strategy:
 
-- **`main`** - Production-ready, stable code only
-- **`release`** - Staging branch for testing before production
-- **`integration`** - Development branch where all contributions are merged
-- **`fb_jsonRepair`** - Feature branch (example)
+- **`main`** - Production-ready, stable code only (protected - requires PR review)
+- **`release`** - Staging branch for testing before production (protected - requires PR review)
+- **`integration`** - Development branch where all contributions are merged (protected - requires PR review)
+- **Feature branches** - Individual contributor branches cut from `integration` (e.g., `feature/description`, `fix/bug-name`)
+
+**Important**: All protected branches (`main`, `release`, `integration`) require pull request reviews before merging. Contributors can only push directly to their own feature branches, not to protected branches.
 
 ## Getting Started
 
@@ -95,10 +97,15 @@ git push origin feature/your-feature-name
 
 ## Pull Request Process
 
-1. **Review**: All PRs will be reviewed by maintainers
-2. **Feedback**: Address any feedback or requested changes
-3. **Testing**: Ensure all tests pass and the code works as expected
-4. **Merge**: Once approved, your PR will be merged into `integration`
+**Important**: The `integration` branch is protected and requires review before merging. You cannot push directly to `integration`. All changes must go through the PR process.
+
+1. **Create Feature Branch**: Cut a branch from `integration` in your fork
+2. **Make Changes**: Push your changes to your feature branch only
+3. **Create PR**: Open a pull request from your feature branch to `integration`
+4. **Review**: All PRs will be reviewed by maintainers (at least 1 approval required)
+5. **Feedback**: Address any feedback or requested changes
+6. **Testing**: Ensure all tests pass and the code works as expected
+7. **Merge**: Once approved, your PR will be merged into `integration` by maintainers
 
 ## Code Review Guidelines
 
@@ -112,18 +119,25 @@ git push origin feature/your-feature-name
 ```
 Your Fork
     ↓
-feature/xyz branch
+feature/xyz branch (cut from integration)
     ↓
-PR → integration (reviewed & merged)
+Push changes to your feature branch
     ↓
-Testing & validation
+PR → integration (requires review & approval)
     ↓
-PR → release (staging)
+After merge to integration: Testing & validation
+    ↓
+PR → release (requires review & approval)
     ↓
 Final validation
     ↓
-PR → main (stable/production)
+PR → main (requires review & approval)
 ```
+
+**Key Points**:
+- You can only push directly to your own feature branches
+- All merges to `integration`, `release`, and `main` require PR review and approval
+- Never push directly to protected branches
 
 ## Questions?
 
