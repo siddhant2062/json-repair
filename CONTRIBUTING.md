@@ -41,7 +41,7 @@ Our project follows a structured branching strategy:
 
 Please follow these naming conventions for your branches:
 
-- **Features**: `feature/description` (e.g., `feature/json-parser-improvement`)
+- **Features**: `feature/description` or `fb_description` (e.g., `feature/json-parser-improvement`, `fb_jsonRepair`)
 - **Bug Fixes**: `fix/description` (e.g., `fix/null-handling`)
 - **Documentation**: `docs/description` (e.g., `docs/update-readme`)
 - **Refactoring**: `refactor/description` (e.g., `refactor/error-handling`)
